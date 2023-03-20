@@ -1,0 +1,42 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def quadratic(X, A):  # A= [c, b, a] [0次方, 1次方, 2次方]
+    L = []
+    for i in range(len(X)):
+        L.append(A[0] + A[1]*X[i] + A[2]*X[i]**2)
+    return L
+
+
+
+A1 = [1, 2, 3]
+A2 = [-1, -2, -3]
+A3 = [4, 5, 6]
+X = []
+Y = []
+
+for i in range(100):
+    X.append(-0.5 + i/100)
+Y = quadratic(X, A1)
+print(X)
+print(Y)
+
+
+
+
+
+
+
+
+# x = [[1, 3], [2, 4], [3, 5], [4, 6]]
+# y = [[1, 16], [4, 9], [9, 4], [16, 1]]
+# plt.gca().set_prop_cycle('color', ['red', 'blue', 'green', 'black'])
+# plt.plot(x, y, 'ro')
+# plt.plot(x, y, linestyle='solid')
+# plt.show()
+
+
+
+
+
+
